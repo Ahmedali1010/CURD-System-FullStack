@@ -1,0 +1,20 @@
+# Build folders
+bin/
+obj/
+
+# Configuration and Secrets
+appsettings.json
+appsettings.Development.json
+*.user
+secrets.json
+
+# Local Databases 
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE and OS files
+.vs/
+.vscode/
+*.suo
+.DS_Store
