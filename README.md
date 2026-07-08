@@ -1,4 +1,4 @@
-Project Overview
+###Project Overview
 
 S-System is a full-stack CRUD application for managing product records with role-differentiated access control. The backend is implemented as a .NET 10 Minimal API using Entity Framework Core against a PostgreSQL database hosted on Supabase. The frontend is a React 19 single-page application written in TypeScript, communicating with the backend over a stateless, token-authenticated REST API.
 
