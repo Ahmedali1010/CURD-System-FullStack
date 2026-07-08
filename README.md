@@ -1,12 +1,12 @@
-###Project Overview
+# Project Overview
 
 S-System is a full-stack CRUD application for managing product records with role-differentiated access control. The backend is implemented as a .NET 10 Minimal API using Entity Framework Core against a PostgreSQL database hosted on Supabase. The frontend is a React 19 single-page application written in TypeScript, communicating with the backend over a stateless, token-authenticated REST API.
 
-Architecture
+# Architecture
 
 The system follows a layered architecture with explicit separation of concerns across both the backend and frontend.
 
-Backend
+# Backend
 
 
 Presentation layer — HTTP endpoints defined in Program.cs, grouped by domain (authentication, user/role management, products)
@@ -15,7 +15,7 @@ Domain layer — Entities (User, Role, Product) represent the core data model an
 Data access layer — AppDbContext (EF Core) manages entity mapping, relationships, and schema migrations against PostgreSQL
 
 
-Frontend
+# Frontend
 
 
 Presentation layer — Page components (LoginPage, DashboardPage) and reusable UI components
@@ -25,7 +25,7 @@ Service layer — A centralized Axios client encapsulates all HTTP communication
 
 This separation keeps persistence, business rules, and presentation independently modifiable and testable.
 
-Key Technologies
+# Key Technologies
 
 Backend
 
@@ -49,7 +49,7 @@ Axios
 jwt-decode
 
 
-Features
+# Features
 
 
 JWT-based authentication with stateless, bearer-token session handling
