@@ -15,3 +15,19 @@ A full-stack product-management web application built with **.NET 10 Minimal API
 - **Toast notifications** — Inline feedback for every create / update / delete action
 
 ---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Backend | .NET 10 Minimal API |
+| ORM | Entity Framework Core 10 + Npgsql |
+| Auth | JWT Bearer (`Microsoft.AspNetCore.Authentication.JwtBearer`) |
+| Password hashing | BCrypt.Net-Next |
+| Frontend | React 19, TypeScript, Vite 8 |
+| Routing | React Router v7 |
+| HTTP client | Axios |
+| Database | PostgreSQL (Supabase) |
+| i18n | Custom context — English + Kurdish Sorani (RTL) |
+
+---
