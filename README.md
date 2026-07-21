@@ -31,3 +31,44 @@ A full-stack product-management web application built with **.NET 10 Minimal API
 | i18n | Custom context — English + Kurdish Sorani (RTL) |
 
 ---
+## Project Structure
+
+```
+S-System/
+├── backend/
+│   ├── Data/
+│   │   └── AppDbContext.cs       # EF Core DbContext + seeding
+│   ├── DTOs/
+│   │   ├── AuthDtos.cs           # RegisterDto, LoginDto
+│   │   ├── ProductDtos.cs        # ProductDto, CreateProductDto, UpdateProductDto
+│   │   └── UserDtos.cs           # UserDto, UpdateUserRoleDto
+│   ├── Entities/
+│   │   ├── Product.cs
+│   │   ├── Role.cs
+│   │   └── User.cs
+│   ├── Migrations/
+│   ├── Program.cs                # All endpoints, middleware, DI
+│   ├── appsettings.json
+│   └── backend.csproj
+└── frontend/
+    └── src/
+        ├── api/
+        │   ├── axios.ts          # Axios instance with auth interceptor
+        │   └── products.ts       # productApi helper
+        ├── components/
+        │   ├── ConfirmDialog.tsx
+        │   ├── Navbar.tsx
+        │   ├── ProductModal.tsx
+        │   ├── ProtectedRoute.tsx
+        │   └── Toast.tsx
+        ├── contexts/
+        │   ├── AuthContext.tsx    # JWT parsing, login/logout
+        │   └── I18nContext.tsx    # Language switching, RTL
+        ├── locales/
+        │   ├── en.ts
+        │   └── ckb.ts            # Kurdish Sorani translations
+        ├── pages/
+        │   ├── LoginPage.tsx
+        │   └── DashboardPage.tsx
+        └── App.tsx
+```
