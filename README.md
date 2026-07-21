@@ -72,3 +72,14 @@ S-System/
         │   └── DashboardPage.tsx
         └── App.tsx
 ```
+---
+
+## Getting Started
+
+### Prerequisites
+
+- [.NET 10 SDK](https://dotnet.microsoft.com/download)
+- [Node.js 20+](https://nodejs.org/)
+- A PostgreSQL instance (local or [Supabase](https://supabase.com/))
+
+---
