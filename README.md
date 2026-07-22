@@ -150,3 +150,49 @@ Two accounts are seeded automatically on the first run:
 > **Note:** Change these credentials before deploying to production.
 
 ---
+
+## API Endpoints
+
+### Auth
+
+| Method | Path | Access | Description |
+|---|---|---|---|
+| `POST` | `/api/auth/register` | Public | Create a new `User` account |
+| `POST` | `/api/auth/login` | Public | Returns a JWT token |
+
+### Products
+
+| Method | Path | Access | Description |
+|---|---|---|---|
+| `GET` | `/api/products` | Authenticated | List all products |
+| `GET` | `/api/products/{id}` | Authenticated | Get a single product |
+| `POST` | `/api/products` | Admin only | Create a product |
+| `PUT` | `/api/products/{id}` | Admin only | Update a product |
+| `DELETE` | `/api/products/{id}` | Admin only | Delete a product |
+
+### Users
+
+| Method | Path | Access | Description |
+|---|---|---|---|
+| `GET` | `/api/users` | Admin only | List all users with roles |
+| `PUT` | `/api/users/{id}/role` | Admin only | Change a user's role |
+
+---
+
+## Internationalization
+
+The UI supports two languages switchable at runtime:
+
+| Code | Language | Direction |
+|---|---|---|
+| `en` | English | LTR |
+| `ckb` | Kurdish Sorani (سۆرانی) | RTL |
+
+The selected language is persisted to `localStorage`. The `<html>` element's `dir` and `lang` attributes update automatically.
+
+---
+
+## License
+
+This project is for educational and portfolio purposes. Feel free to fork and adapt it.
+
