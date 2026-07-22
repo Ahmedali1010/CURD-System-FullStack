@@ -83,3 +83,34 @@ S-System/
 - A PostgreSQL instance (local or [Supabase](https://supabase.com/))
 
 ---
+
+### 1 — Backend Setup
+
+```bash
+cd backend
+```
+
+Open `appsettings.json` and configure your connection string and JWT secret:
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=<host>;Port=5432;Database=<db>;Username=<user>;Password=<password>;SslMode=Require;"
+  },
+  "Jwt": {
+    "Key": "<your-secret-key-at-least-32-chars>",
+    "Issuer": "SSystemAPI",
+    "Audience": "SSystemClient"
+  }
+}
+```
+
+Run the API (the app migrates and seeds the database automatically on startup):
+
+```bash
+dotnet run
+```
+
+The API will be available at `http://localhost:5000` (or whichever port is configured in `launchSettings.json`).
+
+---
