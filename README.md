@@ -114,3 +114,39 @@ dotnet run
 The API will be available at `http://localhost:5000` (or whichever port is configured in `launchSettings.json`).
 
 ---
+
+### 2 — Frontend Setup
+
+```bash
+cd frontend
+npm install
+```
+
+Create a `.env` file (or edit the existing one):
+
+```
+VITE_API_URL=http://localhost:5000
+```
+
+Start the dev server:
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+---
+
+## Default Credentials
+
+Two accounts are seeded automatically on the first run:
+
+| Username | Password | Role |
+|---|---|---|
+| `admin` | `Admin@123` | Admin |
+| `user` | `User@123` | User |
+
+> **Note:** Change these credentials before deploying to production.
+
+---
